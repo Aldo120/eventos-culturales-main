@@ -1,0 +1,96 @@
+main {
+
+  h2 {
+    text-align: center;
+    color: #333;
+    font-weight: bold;
+    letter-spacing: 1px;
+
+    width: 80%;
+    margin: 0 auto;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #06306e80;
+  } 
+
+  .tabla-formulario{
+    width: 80%;
+    margin: 30px auto;
+    height: auto;
+    
+    th, td{
+      padding: 10px 0;
+    }
+
+    th{
+      text-align: right;
+      padding-right: 10px;
+
+      span{
+        font-style: italic;
+        font-size: smaller;
+        color: #062f6e;
+        font-weight: lighter;
+    }
+    }
+  }
+
+
+  .contenedor-img {
+    width: 80%;
+    margin: 20px auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 15px;
+
+    .image {
+      height: 200px;
+      min-height: 200px;
+      
+      border-radius: 7px;
+      box-shadow: inset 1px 1px 25px #062f6e ;
+
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-image: url(../img/eventos/evento-1.jpg);
+      
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
+    .evento-1 {background-image: url(../img/eventos/evento-1.jpg);}
+    .evento-2 {background-image: url(../img/eventos/evento-2.jpg);}
+    .evento-3 {background-image: url(../img/eventos/evento-3.jpg);}
+    .evento-4 {background-image: url(../img/eventos/evento-4.jpg);}
+    .evento-5 {background-image: url(../img/eventos/evento-5.jpg);}
+    .evento-6 {background-image: url(../img/eventos/evento-6.jpg);}
+    .evento-7 {background-image: url(../img/eventos/evento-7.jpg);}
+    .evento-8 {background-image: url(../img/eventos/evento-8.jpg);}
+    .evento-9 {background-image: url(../img/eventos/evento-9.jpg);}
+    .evento-10 {background-image: url(../img/eventos/evento-10.png);}
+
+    .active {
+      border: 5px solid blue;
+    }
+  }
+
+  .submit {
+   width: 100%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin: 50px 0; 
+  }
+
+}
+
+
+.fa-eye{
+  color: #062f6e;
+  margin-left: 5px;
+
+  &:hover{
+    cursor: pointer;
+  }
+}

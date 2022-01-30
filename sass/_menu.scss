@@ -1,0 +1,324 @@
+body {
+  background-color: var(--bg-color);
+  overflow-x: hidden;
+}
+
+.iconoMenu {
+  font-size: 35px;
+  color: #062f6e;
+
+  position: -webkit-sticky;
+  position: sticky;
+  top: 30px;
+  margin-right: 30px;
+  margin-left: auto;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+
+header {
+  width: 100%;
+  min-height: 35vh;
+  display: flex;
+
+  .menu {
+    width: 50%;
+    height: 35vh;
+    max-height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 10px;
+    padding-right: 5%;
+
+    // background: linear-gradient(#06306e28 50%, transparent 50%);
+    background-color: #06306e28;
+    
+    h1 {
+      font-size: 2.5em;
+      color: #062f6e;
+      padding: 0 20px;
+    }
+  }
+
+  .torres {
+    min-width: 10%;
+    height: 35vh;
+    max-height: 100%;
+
+    position: absolute;
+    left: 45%;
+
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url(../img/torres.jpg);
+
+    border-radius: 50%;
+    outline: var(--bg-color) 10px solid;
+    
+  }
+
+  .datos {
+    width: 50%;
+    height: 35vh;
+    max-height: 100%;
+
+    display: flex;
+    align-items: center;
+    padding-left: 8%;
+    
+    background-color: #06306e28;
+
+    div {
+      text-align: left;
+      color: #06306eb6;
+      font-weight: bold;
+
+      span {
+        color: #062f6e;
+        font-size: 1.2em;
+        display: none;
+      }
+
+      p {
+        margin: 3px;
+      }
+    }
+
+    .menu-right {
+      display: none;
+    }
+  }
+}
+
+
+
+
+
+
+// ESTILOS DEL SIDE BAR
+.side-bar {
+  min-height: 100vh;
+  width: 100%;
+  // background-color: #333;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+
+  transform: translate(-2000px);
+  opacity: 0;
+
+  z-index: 1;
+  
+
+  .nav-menu {
+    width: 20%;
+    min-height: 100%;
+    background-color: whitesmoke;
+
+    .menu-header{
+    min-width: 100%;
+    max-height: 30%;
+    height: 30%;
+
+    padding: 20px auto;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.363);
+
+      img {
+        width: 60%;
+        margin: 20px auto 0;
+
+      }
+
+      h3 {
+        text-align: center;
+        color: #062f6e;
+      }
+    }
+
+    .menu-body {
+    min-width: 100%;
+    max-height: 70%;
+    height: 70%;
+
+      ul {
+        padding-left: 0;
+        margin-top: 20px;
+
+        .active {
+          border-left: 7px solid #062f6e;
+        }
+
+        li {
+          padding: 10px 20px;
+          font-size:18px;
+          
+          &:hover {
+            border-left: 7px solid #062f6e;
+          }
+
+          a {
+            &:hover {
+              color: black;
+            }
+          }
+        }
+      }
+    }
+  }
+
+
+
+  .transparent {
+    width: 80%;
+    min-height: 100%;
+    // background-color: rgba(0, 0, 0, 0.473);  
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.541), transparent); 
+
+    .icono-cerrar {
+      position: relative;
+      left: 25px;
+      top: 15px;
+      font-size: 35px;
+      color: white;
+  
+      &:hover {
+        cursor: pointer
+      }
+    }
+
+  }
+}
+
+
+@media screen and (min-width: 801px) and  (max-width: 1200px) {
+  header {
+
+    .menu {
+      display: none;
+    }
+
+    .torres {
+      width: 15%;
+      left: 0;
+      border-radius: 0;
+      outline: none;
+    }
+
+    .datos {
+      width: 100%;
+      padding-left: 20%;
+      
+      div{
+        span {
+          display: block;
+        }
+      }
+
+      .menu-right {
+        // border: 1px solid red;
+        font-size: 2.5em;
+        margin: auto 20px auto auto;
+        display: block;
+
+        &:hover {
+          cursor:pointer
+        }
+      }
+    }
+  }
+
+
+  .side-bar {
+    .nav-menu { 
+      width: 40%; 
+
+      .menu-header {
+        img {
+          width: 40%;
+        }
+      }
+    }
+    .transparent {width : 60% }
+  }
+}
+
+.marcaAgua{
+  width: 10%;
+  max-width: 10%;
+  position: fixed;
+  bottom: 10px;
+  right: 10px; 
+  z-index: 1;
+  opacity: 80%;
+  display: none;
+}
+
+
+@media screen and  (max-width: 800px) {
+  .marcaAgua {
+    display: block;
+  }
+
+
+  header {
+
+    min-height: 20vh;
+    height: 20vh;
+
+    .menu {
+      display: none;
+    }
+
+    .torres {
+      display: none;
+    }
+
+    .datos {
+      width: 100%;
+      padding-left: 5%;
+
+      font-size: 12px;
+      
+      div{
+        span {
+          display: block;
+        }
+      }
+
+      .menu-right {
+        // border: 1px solid red;
+        font-size: 2.5em;
+        margin: auto 20px auto auto;
+        display: block;
+
+        &:hover {
+          cursor:pointer
+        }
+      }
+    }
+  }
+
+
+
+
+  .side-bar {
+    .nav-menu { 
+      width: 60%; 
+
+      .menu-header {
+        img {
+          width: 40%;
+        }
+      }
+    }
+    .transparent {width : 40% }
+  }
+}
+

@@ -1,0 +1,27 @@
+.footer {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 3rem;
+  margin-bottom: 0;
+  padding: 5%;
+  background: #062f6e;
+  color: white;
+  justify-content: space-between;
+  
+	-webkit-box-shadow: rgba(0, 0, 0, 0.39) 0 7px 35px 0;
+	-moz-box-shadow: rgba(0, 0, 0, 0.39) 0 7px 35px 0;
+	box-shadow: inset rgba(0, 0, 0, 0.39) 0 7px 35px 0;
+
+  .texto {
+    width: 80%;
+  }
+
+  .logo {
+    width: 20%;
+  }
+}
+
+
+
+  
+

@@ -1,0 +1,133 @@
+body {
+  margin: 0;
+  min-height: 100vh;
+  background-image: url(../img/background_login.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+body:before {
+  content: "";
+
+  width: 100%;
+  min-height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  // background-image: linear-gradient(90deg, #73672D, #F29863);
+  background-image: linear-gradient(90deg, #062f6e, #dcac09);
+  //background-image: linear-gradient(90deg, #062f6e, #062f6e);
+  opacity: 0.4;
+}
+
+.contenedor {
+  z-index: 2;
+  width: 40%;
+  height: 60vh;
+  margin: 20vh 30%;
+}
+
+@media screen and  (max-width: 700px) {
+  .contenedor {
+    width: 70%;
+    height: auto;
+    margin: 20vh 15%;
+  }
+}
+
+
+.login {
+  max-width: 90%;
+  margin: 0px 5%;
+
+  .title {
+    font-size: 2em;
+    letter-spacing: 0;
+    text-align: center;
+    color: var(--color-resalta);
+    font-family: var(--font-articles);
+  }
+
+  .subtitle {
+    font-size: 1.2em;
+    text-align: center;
+    color: var(--color-resalta);
+    margin: 10px;
+    font-weight: lighter;
+    font-family: var(--font-title);
+  }
+
+  &-renglon {
+    // border: 1px solid red;
+    display: flex;
+    margin: 20px 0px;
+
+    label {
+      // border: 1px solid green;
+      min-width: 10%;
+      height: 45px; 
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #06306ea8;
+      color: #dcab09af;
+
+      border-top-left-radius: 5px;
+      border-bottom-left-radius: 5px;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
+    input[type="text"], input[type="password"], input[type="email"] {
+      max-width: 90%;
+      min-width: 90%;
+      height: 45px;
+      // width: 90%;
+      text-align: center;
+
+      background-color: rgba(255, 255, 255, 1);
+      color: var(--title-color);
+      border-top-right-radius: 5px;
+      border-bottom-right-radius: 5px;
+      border: none;
+
+      &:focus {
+        border: 1.5px solid #062f6e;
+        border-radius: 3px;
+        outline: none;
+      }
+    }
+  }
+
+  .alert {
+    text-align: left;
+    color: var(--color-resalta);
+  }
+
+  &-submit {
+    float: right;
+    padding: 10px 25px;
+    color: #dcab09af;
+    background-color:#06306ea8;
+    border: 1px solid #dcab09af;
+    border-radius: 5px;
+
+    &:hover {
+      cursor: pointer;
+      color:#06306ea8;
+    background-color: #dcab09af;
+    border: 1px solid#06306ea8;
+    }
+  }
+}
+
+.captcha {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

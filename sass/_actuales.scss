@@ -1,0 +1,97 @@
+ q.contenedor {
+  width: 80vw;
+  height: auto;
+  margin: 30px auto 50px;
+
+  .seccion{
+    position: relative;
+
+    h2 {
+      text-align: center;
+      color: #333;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    .carrusel-ant, .carrusel-sig {
+      position: absolute;
+      display: block;
+      width: 30px;
+      height: 30px;
+      border: none;
+      top: calc(50% - 35px);
+      cursor: pointer;
+      line-height: 30px;
+      text-align: center;
+      background: none;
+      color: rgba(51, 51, 51, 0.514);
+      font-size: 2em;
+
+      &:hover {
+        color: #062f6e;
+      }
+    }
+
+    .carrusel-ant { left: -35px; }
+
+    .carrusel-sig { right: -35px; }
+
+    .cards {
+      overflow: hidden;
+      
+      .card {
+        max-height:350px;
+        margin-top: 20px;
+        margin-right: 20px;
+        margin-bottom: 20px;
+        border-radius: 20px;
+        
+        background-color: rgb(250, 250, 250);
+
+        transition: all 0.2s ease-in-out;
+
+        &:hover {
+          box-shadow: -1px 10px 11px -3px rgba(39,39,39,0.75);
+          border-bottom: 5px solid orange;
+          transform: translateY(-10px);
+        }
+
+
+        &-img {
+          width: 100%;
+          height: 50%;
+          border-radius: 15px 15px 0px 0px;
+          overflow: hidden;
+
+          img {
+            width: 100%;
+            height: auto;
+          }
+        }
+        
+        .info{
+          padding: 15px;
+          text-align: center;
+
+          h3, h5, p{
+            margin-bottom: 10px;
+          }
+
+        }
+      }
+    }
+  }
+
+  .carrusel-indicadores {
+    margin-bottom: 100px;
+  }
+}
+
+
+@supports(object-fit: cover){
+  .card-img > img{
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+  }
+}

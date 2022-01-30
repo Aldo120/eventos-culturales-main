@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+
+
+  <!-- Metadatos básicos y codificación -->
+  <!-- ================================================== -->
+  <meta http-equiv="Content-Type" content="text/html; charset=utf8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+  <!-- Metadatos específicos para móvil -->
+  <!-- ================================================== -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+
+  <!-- Metadatos para posicionamiento en buscadores -->
+  <!-- ================================================== -->
+  <meta name="author" content="Raymundo Antonio Flores D.">
+  <meta name="author" content="Aldo Gallegos Gallegos.">
+  <meta name="copyright" content="4EverMore" />
+
+
+  <!-- Iconos para página y dispositivos móviles -->
+  <!-- ================================================== -->
+  <link rel="icon" href="img/favicon-4EverMore.ico" type="image/x-icon" />
+  <meta name="msapplication-TileImage" content="img/favicon-4EverMore.ico" />
+  <meta name="msapplication-TileColor" content="#488199" />
+
+
+  <!-- BOOTSTRAP -->
+  <!-- ================================================== -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
+
+
+  <!-- FONTAWESOME -->
+  <!-- ================================================== -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+  <!-- Latest compiled and minified JavaScript -->
+  <!-- ================================================== -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  
+  <!-- Libreria GSAP para movimientos -->
+  <!-- ================================================== -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.0/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.0/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/ScrollToPlugin.min.js"></script>
+
+
+  <!-- FUENTES -->
+  <!-- ================================================== -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=News+Cycle&family=Staatliches&display=swap" rel="stylesheet">
+
+
+  <!-- Estilos CSS -->
+  <!-- ================================================== -->
+  <link rel="stylesheet" type="text/css" href="css/estilos-login.css" />
+
+  <!-- Titulo de la pagina -->
+  <!-- ================================================== -->
+  <title>Iniciar Sesión</title>
+
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+</head>
+<body>
+  <div class="contenedor">
+    <div class="login">
+      <h1 class="title">Iniciar Sesión</h1>
+
+      <p class="subtitle">Sistema de medicion de espectadores</p>
+
+      <form action="php/login.php" method='post' id="login-form">
+        <div class="login-renglon">
+          <label for="username"><span class="fas fa-user"></span></label>
+          <input type="text" 
+                 name="username"
+                 id="username"
+                 placeholder="Usuario"
+                 title="Ingrese su usuario"
+                 required>
+        </div>
+        <div class="login-renglon">
+          <label for="password" id="icon_pass"><span class="fas fa-eye"></span></label>
+          <input type="password" 
+                 name="password"
+                 id="password"
+                 placeholder="Contraseña"
+                 title="Ingrese su contraseña"
+                 required>
+        </div>
+
+        <div class="captcha">
+          <div class="g-recaptcha" data-sitekey="6LfhmeMcAAAAAO5ip6pHdn4mkCnSeGqwc245meEa"></div>
+        </div>
+
+        <button type="submit" target="blank" class="login-submit"><span class="fas fa-arrow-right"></span></button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    // Funcionalidad para que la contrasena sea visible
+    const d = document,
+          $labelPassword = d.getElementById("icon_pass"),
+          $inputPassword = d.getElementById("password");
+
+    $labelPassword.addEventListener("click", () => {
+      if($inputPassword.type == "password") $inputPassword.type = "text"
+      else $inputPassword.type = "password"
+    })
+  </script>
+</body>
+</html>

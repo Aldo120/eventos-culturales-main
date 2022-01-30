@@ -1,0 +1,185 @@
+body{
+  //background-color: rgb(240, 240, 240);
+  background-color: #8eacbf7c;
+  margin:2px;
+  overflow-x: hidden;
+
+  .header {
+    width: 70%;
+    height: 25vh;
+    margin: 0 auto;
+    background-position: top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url(../img/header.jpg);
+    border-radius: 5px 5px 20px 20px;
+
+    &-content{
+      display: none;
+    }
+  }
+
+  .container {
+    margin: 20px 14% 20px 0;
+    margin-left: 14%;
+    
+    .secciones {
+
+      .container-seccion {
+        width: 70%;
+        height: 20vh;
+        position: absolute;
+
+        .form-part {
+          width: 80%;
+          height: auto;
+          margin: 0 auto;
+          // border: 1px solid #122c67;
+
+          .subtitle {
+            color: #122c67;
+            text-align: center;
+            font-size: 1.3em;
+          }
+
+          table {
+            width: 100%;
+            margin: 20px auto;
+
+            th, td {
+              padding: 10px 0;
+            }
+            
+            th {
+              width: 60%;
+            }
+            td {
+              width: 40%;
+
+              label {   
+                margin-left: 60px;
+              }
+
+              select, input {
+                text-align: center;
+              }
+            }
+          }
+        }   
+      }
+  
+      // .seccion1 {
+      //  background-color:  blue;
+      //}
+      .seccion2 {
+        transform: translateX(110vw);
+        // background-color: red;
+
+        .form-part{
+          
+          table{
+
+            th{
+              width: 50%;
+            }
+
+            td{
+              width: 50%;
+            }
+          }
+        }
+        
+       }
+    }
+
+    .botones {
+      padding: 20px;
+      width: 80vw;
+      display: flex;
+        
+      position: absolute;
+      //Modificar bottom dependiendo altura de Footer +100px
+      bottom: 5px;
+      left: 0;
+
+      .siguiente, .registrar, .anterior {
+        position: relative;
+      }
+      
+      .siguiente, .registrar {
+        left: 80%;
+      }
+
+      .anterior {
+        left: 10vw;
+      }
+    }
+  }
+}
+
+
+.row {
+  display: flex;
+  width: 80%;
+  margin: 0 auto;
+  
+  
+  p {
+    display: block;
+    width: 40%;
+    font-weight: bold;
+  }
+  
+  input{
+    width: 60%;
+    text-align: center;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: default;
+  }
+
+}
+
+
+@media screen and (min-width: 801px) and  (max-width: 1200px) {
+  body {
+    margin:2px;
+    
+    .header {
+      width: 80%;
+      border-radius: 5px 5px 20px 20px;
+      margin: 0 auto;
+        
+    }
+  }
+}
+ 
+@media screen and (max-width: 800px) {
+    body {
+        margin: 0px;
+        
+        .header {
+          width: 100%;
+          height: auto;
+          border-radius: 0;
+          margin: 0px;
+          padding: 5px 0px;
+          background-image: none;
+
+          background-color: #122c67;
+            
+        &-content{
+            display: block;
+            text-align: center;
+            color: #fff;
+
+            h1 {
+              margin-top: 0;
+              font-size: 1em;
+              font-weight: bold;
+            }
+        }
+        }
+      }
+}

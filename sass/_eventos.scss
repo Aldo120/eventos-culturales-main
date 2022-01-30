@@ -1,0 +1,144 @@
+main {
+
+  h2 {
+    text-align: center;
+    color: #333;
+    font-weight: bold;
+    letter-spacing: 1px;
+  } 
+
+  .tabla-consulta {
+    width: 80%;
+    margin: 20px auto;
+
+
+    tr {
+      // border: 5px solid #062f6e;
+      border-bottom: 1px solid #06306e80;
+    }
+    
+    td, caption {
+      padding: 10px;
+      color: #333;
+      text-align: center;
+    }
+
+    th {
+      text-align: right;
+      color: #062f6e;
+    }
+
+    td{
+      .entrada {
+        width: 100%;
+        text-align: center;
+        font-style: italic;
+        border: none;
+        outline: none;
+        padding: 6px 0;
+        border-radius: 3px;
+
+        &:focus {
+          outline: 1px solid #062f6e;
+          transition: all 1s;
+        }
+      }
+
+      
+    }
+  }
+
+  .tabla-scroll-container {
+    width: 80%;
+    margin: 20px auto;
+    height: 70vh;
+    overflow: auto;
+
+    margin-bottom: 50px;
+
+    .tabla-datos {
+      width: 100%;
+
+      thead {
+        position: sticky;
+        top: 0; 
+      }
+      
+      caption {
+        text-align: center;
+        font-size: 1.3em; 
+        color: #fff;
+        background-color: #062f6e;
+        padding: 10px 0;
+      }
+  
+      th{
+        // color: #fff;
+        // background-color: #657ea2;
+        color: #2b2b2b;
+         background-color:#7acbdb88;
+        text-align: center;
+        padding: 5px 0px;
+      }
+  
+      tbody{
+        
+        tr{
+          text-align: center;
+          border-bottom: 1px solid #06306e80;
+  
+          &:nth-of-type(even){
+            // background-color: #06306e3a;
+            background-color:#a8e1ed52;
+          }
+  
+          &:hover{
+            // background-color: #06306e60;
+            background-color:#56a7b888; 
+          }
+  
+          td {
+            padding: 10px 0;
+            color: #333;
+          }
+          
+        }
+  
+      }
+    }
+  } 
+}
+
+
+
+.ico-consulta {
+
+  &:hover {
+    color: cyan;
+  }
+}
+
+.ico-edita{
+  &:hover {
+    color: rgb(233, 190, 0);
+  }
+}
+
+.ico-elimina{
+  &:hover {
+    color: red;
+  }
+}
+
+.ico-informe{
+  &:hover {
+    color: darkblue;
+  }
+}
+
+.ico-grafico{
+
+  &:hover {
+    color: rgb(3, 194, 3);
+  }
+}
